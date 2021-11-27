@@ -1,0 +1,30 @@
+
+<!------Oneway databinding-->
+<!-- <div>
+  <label for="">Username</label>
+  <input type="text" (input)="getUserName2($event)" name="" placeholder="Enter Username" id="">
+
+  <button (click)="saveUserName()">Save Name</button>
+
+  <h2>Your User name is: {{displayName}} </h2>
+</div> -->
+
+
+<!---------Twoway databinding-->
+<input type="text" [(ngModel)]="displayName">
+
+<h1>Your text here: {{displayName}}</h1>
+
+<button (click)="changeName()">Change text</button>
+
+<app-video (editvideo)="onedit()" title="Video1" desc="Description 1" url="#1"></app-video>
+<app-video (editvideo)="oneditTwo()" title="Video2" desc="Description 2" url="#2"></app-video>
+
+<button mat-button color="primary">text</button>
+<button mat-stroked-button color="warn">Cancel</button>
+<button mat-flat-button color="warn">Warn</button>
+
+<button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+  <mat-icon>delete</mat-icon>
+</button>
+
